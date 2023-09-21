@@ -1,0 +1,21 @@
+
+body{
+    background: rgb(25,25,25);
+    background: linear-gradient(90deg, rgba(25,25,25,1) 0%, rgba(229,143,101,1) 22%, rgba(249,231,132,1) 66%);
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 750px;
+    padding: 40px;
+    margin-left: 20%;
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.30);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(1px);
+-webkit-backdrop-filter: blur(1px);
+}

@@ -9,11 +9,41 @@
 <body>
 
     <div class="contenedor">
-        <!-- 1. ARMAR BARRA DE BUSQUEDA
-         2. ARMAR DIV CON NOMBRE DE CIUDAD 
-         3. IMAGEN ACTUAL DEL TIEMPO
-         4. DIV HUMEDAD
-         5. DIV VIENTO -->
+
+        <div class="search">
+            <input type="text" placeholder="enter city name">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="weather">
+            <h1 class="city"> Montevieo </h1>
+            <i class="fa-solid fa-cloud fa-2xl"></i>
+            <h1 class="temp"> 21 C</h1>
+            <h2 class="description"></h2>
+            <div class="detalles">
+                <div class="col">
+                    <i class="fa-solid fa-water fa-2xl"></i>
+                    <div>
+                        <p>Humedad</p>
+                        <p class="humedad"></p>
+                        
+        
+                    </div>
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-wind fa-2xl"></i>
+                    <div>
+                        
+                        <p>Velocidad del viento</p>
+                        <p class="viento"></p>
+        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
     </div>
 
 
@@ -24,6 +54,7 @@
 
 
     <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/d765d1fb24.js" crossorigin="anonymous"></script>
     
 </body>
 </html>
