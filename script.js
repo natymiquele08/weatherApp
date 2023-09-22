@@ -4,8 +4,9 @@ const apikey = "bece4615b0b0c64eb761d4679eae9304"
 
 
 const searchBox = document.querySelector(".search input");
-const searchBtn = document.querySelector(".search button");
-const weatherIcon = document.getElementById("icon");
+const searchBtn = document.querySelector(".searchButton");
+const weatherIcon = document.querySelector(".imagenPrincipal");
+
 
 async function checkWeather(city){
     const response = await fetch(API + city + `&appid=${apikey}`);
@@ -14,29 +15,31 @@ async function checkWeather(city){
     console.log(data);
 
     document.querySelector(".city").innerHTML = data.name;
-    document.querySelector(".temp").innerHTML = data.main.temp;
+    document.querySelector(".temp").innerHTML = data.main.temp + " °C";
     document.querySelector(".description").innerHTML = data.weather[0].description;
-    document.querySelector(".humedad").innerHTML = data.main.humidity;
-    document.querySelector(".viento").innerHTML = data.wind.speed;
+    document.querySelector(".humedad").innerHTML = data.main.humidity + "%";
+    document.querySelector(".viento").innerHTML = data.wind.speed + " km/hr";
    
     if(data.weather[0].main == "Clouds"){
-        weatherIcon.innerHTML += `<i class="fa-solid fa-cloud fa-2xl"></i>`
+        weatherIcon.src = "clouds.png"
+        
+        
 
     } 
     else if (data.weather[0].main == "Clear") {
-        weatherIcon.innerHTML += `<i class="fa-solid fa-sun fa-2xl"></i>`
+        weatherIcon.src = "sun.png"
 
     } 
     else if (data.weather[0].main == "Rain") {
-        weatherIcon.innerHTML += `<i class="fa-solid fa-cloud-rain fa-2xl"></i>`
+        weatherIcon.src = "rain.png"
 
     } 
     else if (data.weather[0].main == "Drizzle") {
-        weatherIcon.innerHTML += `<i class="fa-solid fa-cloud-showers-heavy fa-2xl"></i>`
+        weatherIcon.src = "drizzle.png"
 
     } 
     else if (data.weather[0].main == "Mist") {
-        weatherIcon.innerHTML += `<i class="fa-solid fa-smog fa-2xl"></i>`
+        weatherIcon.src = "mist.png"
 
     }
 
