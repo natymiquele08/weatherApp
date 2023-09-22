@@ -12,7 +12,7 @@ async function checkWeather(city){
     const response = await fetch(API + city + `&appid=${apikey}`);
     var data = await response.json();
 
-    console.log(data);
+    
 
     document.querySelector(".city").innerHTML = data.name;
     document.querySelector(".temp").innerHTML = data.main.temp + " °C";
@@ -42,6 +42,8 @@ async function checkWeather(city){
         weatherIcon.src = "mist.png"
 
     }
+
+    document.querySelector(".weather").style.display = "block";
 
 
 }

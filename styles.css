@@ -28,11 +28,22 @@ h1{
 
 .weather{
     text-align: center;
+    display: none;
 }
 
 
+
+
 .detalles{
+    background: rgba(255, 255, 255, 0.082);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border-radius: 16px;
+    padding: 15px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 100px;
     padding-top: 30px;
 }
@@ -41,6 +52,10 @@ h1{
     width: 80px;
 }
 
+.humedad,
+.viento {
+    font-size: 2rem;
+}
 
 
 .search {
